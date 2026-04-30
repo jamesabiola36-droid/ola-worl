@@ -220,7 +220,41 @@
             </article>
         </div>
     </main>
+</main>
 
+    <section class="container" style="margin-top: 50px; border-top: 1px solid #333; padding-top: 50px;">
+        <h2 style="color: var(--accent); text-align: center;">OLA'S INTELLIGENCE HUB</h2>
+        <div id="chat-container" style="background: #111; border: 1px solid var(--accent); height: 400px; overflow-y: scroll; padding: 20px; margin-bottom: 10px;">
+            <div style="color: var(--accent);">[AI]: Welcome to Ola's Space. I am ready to discuss my creator's novels, theology, or global politics. How can I assist you?</div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <input type="text" id="user-input" style="flex: 1; padding: 15px; background: #222; border: 1px solid #444; color: white;" placeholder="Ask about 'The Voyager' or religion...">
+            <button onclick="sendMessage()" style="padding: 0 30px; background: var(--accent); border: none; font-weight: bold; cursor: pointer;">SEND</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ola's Space | Professional Prose & Thrillers</p>
+    </footer>
+
+    <script>
+    function sendMessage() {
+        const input = document.getElementById('user-input');
+        const container = document.getElementById('chat-container');
+        
+        if (input.value.trim() !== "") {
+            container.innerHTML += `<div style="margin: 10px 0;"><strong>You:</strong> ${input.value}</div>`;
+            setTimeout(() => {
+                container.innerHTML += `<div style="margin: 10px 0; color: #d4af37;"><strong>AI:</strong> Processing your request... [Note: This is a design preview. To connect the real AI brain, we will need to add an API key next.]</div>`;
+                container.scrollTop = container.scrollHeight;
+            }, 1000);
+            input.value = "";
+        }
+    }
+    </script>
+
+</body>
+</html>
     <footer>
         <p>&copy; 2026 Ola's Space | Professional Prose & Thrillers</p>
     </footer>
