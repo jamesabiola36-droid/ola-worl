@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola's Space | Novel Collection</title>
+    <style>
+        /* ALL STYLING IS NOW INSIDE THE HTML SO COLORS WILL WORK */
+        :root {
+            --bg-dark: #0a0a0a;
+            --card-bg: #161616;
+            --accent: #d4af37; /* Gold for a premium thriller feel */
+            --text-light: #e0e0e0;
+            --text-dim: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Header */
+        header {
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        header h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin: 0;
+            letter-spacing: 6px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            color: var(--accent);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        /* Bio Section */
+        .about-author {
+            padding: 80px 0;
+            background-color: #111;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .about-author h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .about-author p {
+            font-size: 1.2rem;
+            max-width: 750px;
+            margin: 0 auto;
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        /* Book Grid */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            padding-bottom: 100px;
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .cover-placeholder {
+            height: 380px;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: #444;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .book-info {
+            padding: 25px;
+        }
+
+        .book-info h3 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .book-info p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        .read-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .read-btn:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            background: #000;
+            border-top: 1px solid #222;
+            font-size: 0.85rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>OLA'S SPACE</h1>
+            <div class="tagline">The Literary World of James Abiola Ola</div>
+        </div>
+    </header>
+
+    <section class="about-author">
+        <div class="container">
+            <h2>About the Author</h2>
+            <p>"A prose writer weaving psychological thrillers that explore the technical precision of the mind and the shadows of human intent."</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">The Four Novels</h2>
+        
+        <div class="book-grid">
+            <article class="book-card">
+                <div class="cover-placeholder">THE VOYAGER</div>
+                <div class="book-info">
+                    <h3>The Voyager</h3>
+                    <p>A deep exploration into psychological suspense and the journeys we take within.</p>
+                    <a href="#" class="read-btn">READ NOVEL</a>
+                </div>
+            </article>
+
+            <article class="book-card">
+                <div class="cover-placeholder">DARK LIGHT</div>
+                <div class="book-info">
+                    <h3>Dark Light</h3>
+                    <p>Exploring the blurred lines between reality and the psychological shadows we cast.</p>
+                    <a href="#" class="read-btn">READ NOVEL</a>
+                </div>
+            </article>
+
+            <article class="book-card">
+                <div class="cover-placeholder">NOVEL III</div>
+                <div class="book-info">
+                    <h3>Echoes of Reason</h3>
+                    <p>A thriller focused on the intricate mechanics of a mind pushed to its limits.</p>
+                    <a href="#" class="read-btn">COMING SOON</a>
+                </div>
+            </article>
+
+            <article class="book-card">
+                <div class="cover-placeholder">NOVEL IV</div>
+                <div class="book-info">
+                    <h3>The Silent Pivot</h3>
+                    <p>The final chapter in a series of gripping, complex psychological narratives.</p>
+                    <a href="#" class="read-btn">COMING SOON</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ola's Space | Professional Prose & Thrillers</p>
+    </footer>
+
+</body>
+</html>

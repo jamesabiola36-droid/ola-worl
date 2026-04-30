@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Ola's Space</title>
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --accent: #d4af37;
+            --card-bg: #161616;
+            --text: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-dark);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border: 1px solid var(--accent);
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        h2 {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+            color: var(--accent);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            background: #222;
+            border: 1px solid #333;
+            color: white;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: var(--accent);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--accent);
+            color: black;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #b8962d;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #555;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <h2>Reader Access</h2>
+        <form action="index.html">
+            <div class="input-group">
+                <label>Email or Username</label>
+                <input type="text" placeholder="Enter your ID" required>
+            </div>
+            <div class="input-group">
+                <label>Access Code</label>
+                <input type="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="login-btn">Enter Ola's Space</button>
+        </form>
+        <a href="index.html" class="back-link">Return to Library</a>
+    </div>
+
+</body>
+</html>
